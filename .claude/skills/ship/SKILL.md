@@ -13,6 +13,8 @@ and close the wip.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
+   Append to .claude/audit.log:
+   [YYYY-MM-DD HH:mm] | ship | [feature-slug] | START
 3. Confirm status is shipping — if not, stop and tell the user 
    which step is missing
 4. Read .claude/memory/environments.md — confirm target repo and branch
@@ -91,6 +93,11 @@ cycle to roadmap/index.md with status not started.
 2. Note any TODOs, FIXMEs, or deferred items added to roadmap
 3. Move .claude/memory/wip/[feature-slug].md to 
    .claude/memory/wip/_archive/[feature-slug].YYYY-MM-DD-HHhmm.md
+
+## Step 5 — Audit log
+
+Append to .claude/audit.log:
+[YYYY-MM-DD HH:mm] | ship | [feature-slug] | END
 
 ## Final report
 

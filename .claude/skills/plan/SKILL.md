@@ -22,6 +22,9 @@ else is needed.
 Check .claude/memory/wip/ — if a file already exists for this 
 feature, read it and resume from where it left off.
 
+Append to .claude/audit.log:
+[YYYY-MM-DD HH:mm] | plan | [feature-slug] | START
+
 ## The conversation
 
 Follow this agenda as a natural dialogue. Do not present it as a 
@@ -159,3 +162,5 @@ planning
 
 4. Update .claude/memory/roadmap/index.md — add or update feature entry
 5. Tell the user: "Plan approved. Run /build to start implementation."
+6. Append to .claude/audit.log:
+   [YYYY-MM-DD HH:mm] | plan | [feature-slug] | END

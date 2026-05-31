@@ -14,6 +14,8 @@ decision, you stop and flag it rather than deciding unilaterally.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
+3. Append to .claude/audit.log:
+   [YYYY-MM-DD HH:mm] | build | [feature-slug] | START
 
 If no wip file exists: stop. Tell the user to run /plan first.
 
@@ -93,6 +95,8 @@ When all planned items are implemented:
    - Ignore
 4. Update wip status to reviewing
 5. Update session log with completion note
+6. Append to .claude/audit.log:
+   [YYYY-MM-DD HH:mm] | build | [feature-slug] | END
 
 Tell the user: "Build complete. Run /review."
 

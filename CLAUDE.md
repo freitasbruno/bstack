@@ -22,6 +22,8 @@ Work always follows this order. Never skip a step.
 | /review  | Dead code, dead tables, duplicate components, drift                     | After build            |
 | /verify  | tsc, lint, automated tests, human test checklist                        | Before commit          |
 | /ship    | Commit, push, update memory files                                       | After verify passes    |
+| /reflect | Retrospective — read archives, identify patterns, produce proposals     | End of project or milestone |
+| /evolve  | Implement a specific harness improvement (user-directed)                | After /reflect, or on demand |
 
 ## Memory index
 Load only what the current task requires.

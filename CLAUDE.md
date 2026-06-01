@@ -25,6 +25,13 @@ Work always follows this order. Never skip a step.
 | /reflect | Retrospective — read archives, identify patterns, produce proposals     | End of project or milestone |
 | /evolve  | Implement a specific harness improvement (user-directed)                | After /reflect, or on demand |
 
+## Utility skills
+Non-blocking tools that can be used at any point without interrupting flow.
+
+| Skill  | Usage                        | Purpose                                              |
+|--------|------------------------------|------------------------------------------------------|
+| /note  | `/note [topic]`              | Capture an observation from context → notes.md       |
+
 ## Memory index
 Load only what the current task requires.
 
@@ -42,6 +49,7 @@ Load only what the current task requires.
 | .claude/memory/tests/standards.md         | Plan phase and verify phase                    |
 | .claude/memory/known-bugs.md              | Review phase, any bug-related work             |
 | .claude/memory/technical-debt.md          | Planning phase, review phase                   |
+| .claude/memory/notes.md                   | Every /plan, /reflect, and /evolve session     |
 
 ## Memory update rule
 Before writing to any file in .claude/memory/ (except techstack.md 

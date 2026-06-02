@@ -6,7 +6,14 @@
       "MultiEdit(.claude/memory/**)",
       "Edit(.claude/audit.log)",
       "Write(.claude/audit.log)",
-      "Bash(Add-Content -Path \".claude/audit.log\" *)"
+      "Bash(echo * >> .claude/audit.log)",
+      "PowerShell(php -l *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(New-Item -ItemType Directory *)",
+      "PowerShell(Copy-Item *_backup*)",
+      "Bash(npm run lint 2>&1)",
+      "Bash(npx tsc --noEmit 2>&1)",
+      "Bash(npx tsc --noEmit 2>&1 && npm run lint 2>&1)"
     ]
   }
 }

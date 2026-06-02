@@ -13,7 +13,7 @@ and close the wip.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-   Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | ship | [feature-slug] | START"`
+   Run `echo "$(date +'%Y-%m-%d %H:%M') | ship | [feature-slug] | START" >> .claude/audit.log`
 3. Confirm status is shipping — if not, stop and tell the user 
    which step is missing
 4. Read .claude/memory/environments.md — confirm target repo and branch
@@ -95,7 +95,7 @@ cycle to roadmap/index.md with status not started.
 
 ## Step 5 — Audit log
 
-Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | ship | [feature-slug] | END"`
+Run `echo "$(date +'%Y-%m-%d %H:%M') | ship | [feature-slug] | END" >> .claude/audit.log`
 
 ## Final report
 

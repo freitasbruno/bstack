@@ -22,7 +22,7 @@ else is needed.
 Check .claude/memory/wip/ — if a file already exists for this 
 feature, read it and resume from where it left off.
 
-Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | plan | [feature-slug] | START"`
+Run `echo "$(date +'%Y-%m-%d %H:%M') | plan | [feature-slug] | START" >> .claude/audit.log`
 
 ## The conversation
 
@@ -169,4 +169,4 @@ planning
 
 4. Update .claude/memory/roadmap/index.md — add or update feature entry
 5. Tell the user: "Plan approved. Run /build to start implementation."
-6. Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | plan | [feature-slug] | END"`
+6. Run `echo "$(date +'%Y-%m-%d %H:%M') | plan | [feature-slug] | END" >> .claude/audit.log`

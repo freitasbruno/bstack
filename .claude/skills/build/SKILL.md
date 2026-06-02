@@ -14,7 +14,7 @@ decision, you stop and flag it rather than deciding unilaterally.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-3. Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | build | [feature-slug] | START"`
+3. Run `echo "$(date +'%Y-%m-%d %H:%M') | build | [feature-slug] | START" >> .claude/audit.log`
 
 If no wip file exists: stop. Tell the user to run /plan first.
 
@@ -101,7 +101,7 @@ When all planned items are implemented:
    - Ignore
 4. Update wip status to reviewing
 5. Update session log with completion note
-6. Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | build | [feature-slug] | END"`
+6. Run `echo "$(date +'%Y-%m-%d %H:%M') | build | [feature-slug] | END" >> .claude/audit.log`
 
 Tell the user: "Build complete. Run /review."
 

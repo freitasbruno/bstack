@@ -92,6 +92,17 @@ mkdir -p .claude/memory/roadmap/_backup
 mkdir -p .claude/memory/registry/_backup
 mkdir -p .claude/memory/tests/_backup
 mkdir -p .claude/memory/wip/_archive
+mkdir -p .claude/memory/wip/mockups
+
+Create .claude/memory/wip/mockups/index.md:
+
+# Mockups Index
+
+Tracks all mockups produced during planning and build. Updated whenever
+a mockup is saved — never left stale.
+
+| Feature | Name | File | Created |
+|---------|------|------|---------|
 
 Copy skill files from the bstack source into .claude/skills/.
 
@@ -121,5 +132,6 @@ Memory files created:
 - .claude/memory/registry/patterns.md
 - .claude/memory/registry/utils.md
 - .claude/memory/tests/standards.md
+- .claude/memory/wip/mockups/index.md
 
 Ready. Run /plan to start your first feature.

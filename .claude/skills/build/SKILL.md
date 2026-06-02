@@ -55,6 +55,13 @@ Never run git add, git commit, or git push during implementation.
 
 No console.log in committed code
 
+Mockups go in wip/mockups
+Any UI mockup produced during build — ASCII layout, wireframe, 
+component sketch — must be saved to 
+.claude/memory/wip/mockups/[feature-slug]/[name].md and registered 
+in .claude/memory/wip/mockups/index.md. Never embed in wip files 
+or leave in conversation only.
+
 tsc after every logical unit
 Run npx tsc --noEmit after completing each file group. Fix errors 
 before moving to the next unit.

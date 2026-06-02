@@ -68,11 +68,19 @@ Do not proceed without explicit approval.
 Ask once: "Does this feature need a UI mockup before we go technical?"
 
 If yes: produce a Claude Design brief — precise description of the UI, 
-interactions, data displayed, and existing components to use. 
+interactions, data displayed, and existing components to use.
+Save it to .claude/memory/wip/mockups/[feature-slug]/brief.md.
+Register it in .claude/memory/wip/mockups/index.md.
 Tell the user to take this to Claude Design, iterate, and bring 
-the output back.
+the output back as a file in .claude/memory/wip/mockups/[feature-slug]/.
 
-When the design file comes back, read it carefully:
+If Claude produces any mockup directly (ASCII, wireframe, layout sketch),
+save it to .claude/memory/wip/mockups/[feature-slug]/[name].md and
+register it in index.md — never leave mockups only in conversation.
+
+When the design file comes back, save it to 
+.claude/memory/wip/mockups/[feature-slug]/[name].md, register it 
+in index.md, then read it carefully:
 - What components does it introduce?
 - What existing components from the registry should it use?
 - Does it reveal requirements not in the approved spec?

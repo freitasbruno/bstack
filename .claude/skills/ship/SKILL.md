@@ -13,8 +13,8 @@ and close the wip.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-   Append to .claude/audit.log:
-   [YYYY-MM-DD HH:mm] | ship | [feature-slug] | START
+   Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
+   [timestamp] | ship | [feature-slug] | START
 3. Confirm status is shipping — if not, stop and tell the user 
    which step is missing
 4. Read .claude/memory/environments.md — confirm target repo and branch
@@ -96,8 +96,8 @@ cycle to roadmap/index.md with status not started.
 
 ## Step 5 — Audit log
 
-Append to .claude/audit.log:
-[YYYY-MM-DD HH:mm] | ship | [feature-slug] | END
+Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
+[timestamp] | ship | [feature-slug] | END
 
 ## Final report
 

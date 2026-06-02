@@ -13,8 +13,8 @@ fails, you stop and send the work back to /build.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-   Append to .claude/audit.log:
-   [YYYY-MM-DD HH:mm] | verify | [feature-slug] | START
+   Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
+   [timestamp] | verify | [feature-slug] | START
 3. Confirm status is verifying — if not, stop and tell the user 
    which step is missing
 4. Read .claude/memory/tests/standards.md
@@ -92,8 +92,8 @@ Do not block on these. Note them — they will be handled during
 
 1. Update wip status to shipping
 2. Add verify pass note to session log with timestamp
-3. Append to .claude/audit.log:
-   [YYYY-MM-DD HH:mm] | verify | [feature-slug] | END
+3. Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
+   [timestamp] | verify | [feature-slug] | END
 
 Report:
 Verify: PASSED

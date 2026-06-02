@@ -5,7 +5,8 @@
       "Write(.claude/memory/**)",
       "MultiEdit(.claude/memory/**)",
       "Edit(.claude/audit.log)",
-      "Write(.claude/audit.log)"
+      "Write(.claude/audit.log)",
+      "Bash(Add-Content -Path \".claude/audit.log\" *)"
     ]
   }
 }

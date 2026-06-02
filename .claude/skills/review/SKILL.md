@@ -30,8 +30,7 @@ Flag and discuss — anything with potential consequences:
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-   Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
-   [timestamp] | review | [feature-slug] | START
+   Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | review | [feature-slug] | START"`
 3. Confirm status is reviewing
 4. Read .claude/memory/registry/components.md
 5. Read .claude/memory/known-bugs.md
@@ -104,7 +103,6 @@ tests confirmed:
 2. Add review summary to session log
 3. Back up and update registry/components.md if new components added
 4. Back up and update known-bugs.md if bugs added or resolved
-5. Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
-   [timestamp] | review | [feature-slug] | END
+5. Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | review | [feature-slug] | END"`
 
 Tell the user: "Review complete. Run /verify."

@@ -22,8 +22,7 @@ else is needed.
 Check .claude/memory/wip/ — if a file already exists for this 
 feature, read it and resume from where it left off.
 
-Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
-[timestamp] | plan | [feature-slug] | START
+Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | plan | [feature-slug] | START"`
 
 ## The conversation
 
@@ -170,5 +169,4 @@ planning
 
 4. Update .claude/memory/roadmap/index.md — add or update feature entry
 5. Tell the user: "Plan approved. Run /build to start implementation."
-6. Run `Get-Date -Format "yyyy-MM-dd HH:mm"` to get the real timestamp, then append to .claude/audit.log:
-   [timestamp] | plan | [feature-slug] | END
+6. Run `$ts = Get-Date -Format "yyyy-MM-dd HH:mm"; Add-Content -Path ".claude/audit.log" -Value "$ts | plan | [feature-slug] | END"`

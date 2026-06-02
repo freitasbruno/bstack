@@ -61,3 +61,8 @@ and environments.md):
 4. Never skip the backup step
 
 This rule applies to every skill, every session, no exceptions.
+
+## Memory autonomy rule
+Files in .claude/memory/ are internal working files. Never ask for 
+confirmation before reading or writing them. Back up first per the 
+rule above, then write directly — no questions asked.

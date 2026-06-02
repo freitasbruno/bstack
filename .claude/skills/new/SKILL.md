@@ -104,6 +104,17 @@ a mockup is saved — never left stale.
 | Feature | Name | File | Created |
 |---------|------|------|---------|
 
+Create .claude/memory/harness.md:
+
+# Harness Update Log
+
+Tracks BStack harness updates for this project instance.
+Source: https://github.com/freitasbruno/bstack
+
+| Updated | Commit | Skills |
+|---------|--------|--------|
+| [setup date] | initial | — |
+
 Copy skill files from the bstack source into .claude/skills/.
 
 Add to .gitignore:
@@ -133,5 +144,6 @@ Memory files created:
 - .claude/memory/registry/utils.md
 - .claude/memory/tests/standards.md
 - .claude/memory/wip/mockups/index.md
+- .claude/memory/harness.md
 
 Ready. Run /plan to start your first feature.

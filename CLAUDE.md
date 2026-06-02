@@ -30,7 +30,8 @@ Non-blocking tools that can be used at any point without interrupting flow.
 
 | Skill  | Usage                        | Purpose                                              |
 |--------|------------------------------|------------------------------------------------------|
-| /note  | `/note [topic]`              | Capture an observation from context → notes.md       |
+| /note   | `/note [topic]`              | Capture an observation from context → notes.md       |
+| /update | `/update`                    | Pull latest skill files from bstack source repo      |
 
 ## Memory index
 Load only what the current task requires.
@@ -50,6 +51,7 @@ Load only what the current task requires.
 | .claude/memory/known-bugs.md              | Review phase, any bug-related work             |
 | .claude/memory/technical-debt.md          | Planning phase, review phase                   |
 | .claude/memory/wip/mockups/index.md       | Any feature with UI                            |
+| .claude/memory/harness.md                 | Before running /update                         |
 | .claude/memory/notes.md                   | Every /plan, /reflect, and /evolve session     |
 
 ## Memory update rule

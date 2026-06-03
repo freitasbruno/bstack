@@ -9,12 +9,6 @@
       "Edit(D:/CLAUDE/bstack/.claude/audit.log)",
       "Write(D:/CLAUDE/bstack/.claude/audit.log)",
       "Bash(echo * >> .claude/audit.log)",
-      
-      // 1. Allow the specific echo command with a wildcard for the content
-      "Bash(echo * ) * >> D:/CLAUDE/bstack/.claude/audit.log",
-      "Bash(echo * ) * >> D:\\CLAUDE\\bstack\\.claude\\audit.log",
-      
-      // 2. A broader wildcard for any bash command touching that file (if supported by your tool's glob engine)
       "Bash(*audit.log*)",
       
       "PowerShell(php -l *)",

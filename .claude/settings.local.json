@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"D:\\\\CLAUDE\\\\bstack\\\\.claude\\\\skills\\\\update\")",
+      "Bash(Out-Null)",
+      "Bash(git commit *)",
+      "Bash(mkdir -p \"D:/CLAUDE/bstack/.claude/memory/roadmap/_backup\")",
+      "Bash(cp \"D:/CLAUDE/bstack/.claude/memory/roadmap/index.md\" \"D:/CLAUDE/bstack/.claude/memory/roadmap/_backup/index.2026-06-03-16h33.md\")"
     ]
   }
 }

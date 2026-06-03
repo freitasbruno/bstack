@@ -92,9 +92,9 @@ mkdir -p .claude/memory/roadmap/_backup
 mkdir -p .claude/memory/registry/_backup
 mkdir -p .claude/memory/tests/_backup
 mkdir -p .claude/memory/wip/_archive
-mkdir -p .claude/memory/wip/mockups
+mkdir -p .claude/memory/mockups/_backup
 
-Create .claude/memory/wip/mockups/index.md:
+Create .claude/memory/mockups/index.md:
 
 # Mockups Index
 
@@ -116,6 +116,8 @@ Source: https://github.com/freitasbruno/bstack
 | [setup date] | initial | — |
 
 Copy skill files from the bstack source into .claude/skills/.
+
+Copy .claude/memory-viewer.html from the bstack source into .claude/memory-viewer.html.
 
 Add to .gitignore:
 .claude/memory/wip/_archive/
@@ -143,7 +145,8 @@ Memory files created:
 - .claude/memory/registry/patterns.md
 - .claude/memory/registry/utils.md
 - .claude/memory/tests/standards.md
-- .claude/memory/wip/mockups/index.md
+- .claude/memory/mockups/index.md
 - .claude/memory/harness.md
+- .claude/memory-viewer.html
 
 Ready. Run /plan to start your first feature.

@@ -38,7 +38,12 @@ On confirmation:
    Copy-Item -Path "$tmp\.claude\skills\*" `
      -Destination ".claude\skills\" -Recurse -Force
 
-2. Clean up:
+2. Copy the memory viewer:
+
+   Copy-Item -Path "$tmp\.claude\memory-viewer.html" `
+     -Destination ".claude\memory-viewer.html" -Force
+
+3. Clean up:
 
    Remove-Item -Recurse -Force $tmp
 

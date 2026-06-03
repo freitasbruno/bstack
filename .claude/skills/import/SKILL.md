@@ -79,6 +79,32 @@ As you read, note anything concerning:
 Do not let findings block the import. Present the findings report 
 after memory files are written.
 
+## Scaffold missing harness structure
+
+Before writing memory files, ensure these paths exist (create if absent —
+never overwrite existing content):
+
+- .claude/memory/mockups/_backup/
+- .claude/memory/schema/_backup/
+- .claude/memory/roadmap/_backup/
+- .claude/memory/registry/_backup/
+- .claude/memory/tests/_backup/
+- .claude/memory/wip/_archive/
+
+Create .claude/memory/mockups/index.md if it does not exist:
+
+# Mockups Index
+
+Tracks all mockups produced during planning and build. Updated whenever
+a mockup is saved — never left stale.
+
+| Feature | Name | File | Created |
+|---------|------|------|---------|
+
+Copy .claude/memory-viewer.html from the bstack source if it does not
+exist in this project. Clone bstack to a temp dir, copy the file,
+then remove the temp dir.
+
 ## Writing memory files
 
 Write or merge each file in this order. Back up any existing file 
@@ -107,6 +133,10 @@ Import complete: [mode — fresh / partial / merge]
 
 Memory files written:
 - [list each file with brief note on what was populated]
+
+Harness files ensured:
+- .claude/memory/mockups/index.md
+- .claude/memory-viewer.html
 
 Findings:
 - Known bugs: [N items added]

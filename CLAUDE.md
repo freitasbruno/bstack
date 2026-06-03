@@ -50,7 +50,7 @@ Load only what the current task requires.
 | .claude/memory/tests/standards.md         | Plan phase and verify phase                    |
 | .claude/memory/known-bugs.md              | Review phase, any bug-related work             |
 | .claude/memory/technical-debt.md          | Planning phase, review phase                   |
-| .claude/memory/wip/mockups/index.md       | Any feature with UI                            |
+| .claude/memory/mockups/index.md           | Any feature with UI                            |
 | .claude/memory/harness.md                 | Before running /update                         |
 | .claude/memory/notes.md                   | Every /plan, /reflect, and /evolve session     |
 

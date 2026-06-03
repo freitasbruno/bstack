@@ -13,3 +13,4 @@
 ## Templates
 | Name | Description | Location | Uses |
 |------|-------------|---------|------|
+| MemoryViewer | Single-file HTML/JS memory browser. Sidebar (quick links + file tree), main content pane, module-based renderer. File System Access API + IndexedDB. | .claude/memory-viewer.html | — |

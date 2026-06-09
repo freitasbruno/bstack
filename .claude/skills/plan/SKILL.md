@@ -22,7 +22,9 @@ else is needed.
 Check .claude/memory/wip/ — if a file already exists for this 
 feature, read it and resume from where it left off.
 
-Run `echo "$(date +'%Y-%m-%d %H:%M') | plan | [feature-slug] | START" >> .claude/audit.log`
+Append to .claude/audit.log using the Edit tool:
+`YYYY-MM-DD HH:mm | plan | [feature-slug] | START`
+(Substitute today's date and current time from your session context. Do not use shell date substitution.)
 
 ## The conversation
 
@@ -169,4 +171,6 @@ planning
 
 4. Update .claude/memory/roadmap/index.md — add or update feature entry
 5. Tell the user: "Plan approved. Run /build to start implementation."
-6. Run `echo "$(date +'%Y-%m-%d %H:%M') | plan | [feature-slug] | END" >> .claude/audit.log`
+6. Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | plan | [feature-slug] | END`
+   (Substitute today's date and current time from your session context.)

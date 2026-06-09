@@ -14,7 +14,9 @@ decision, you stop and flag it rather than deciding unilaterally.
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-3. Run `echo "$(date +'%Y-%m-%d %H:%M') | build | [feature-slug] | START" >> .claude/audit.log`
+3. Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | build | [feature-slug] | START`
+   (Substitute today's date and current time from your session context. Do not use shell date substitution.)
 
 If no wip file exists: stop. Tell the user to run /plan first.
 
@@ -101,7 +103,9 @@ When all planned items are implemented:
    - Ignore
 4. Update wip status to reviewing
 5. Update session log with completion note
-6. Run `echo "$(date +'%Y-%m-%d %H:%M') | build | [feature-slug] | END" >> .claude/audit.log`
+6. Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | build | [feature-slug] | END`
+   (Substitute today's date and current time from your session context.)
 
 Tell the user: "Build complete. Run /review."
 

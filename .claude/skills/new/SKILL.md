@@ -94,6 +94,42 @@ mkdir -p .claude/memory/tests/_backup
 mkdir -p .claude/memory/wip/_archive
 mkdir -p .claude/memory/mockups/_backup
 
+Create .claude/settings.json with memory-tree permission rules.
+Use the absolute base path from Phase 1 (call it BASE_PATH).
+Replace forward slashes as needed for the platform.
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Read(.claude/memory/**)",
+      "Edit(.claude/memory/**)",
+      "Write(.claude/memory/**)",
+      "MultiEdit(.claude/memory/**)",
+      "Read(BASE_PATH/.claude/memory/**)",
+      "Edit(BASE_PATH/.claude/memory/**)",
+      "Write(BASE_PATH/.claude/memory/**)",
+      "MultiEdit(BASE_PATH/.claude/memory/**)",
+      "Edit(.claude/audit.log)",
+      "Write(.claude/audit.log)",
+      "Edit(BASE_PATH/.claude/audit.log)",
+      "Write(BASE_PATH/.claude/audit.log)",
+      "Bash(echo * >> .claude/audit.log)",
+      "Bash(*audit.log*)",
+      "Bash(cp *_backup*)",
+      "Bash(cp * .claude/memory/**)",
+      "Bash(cp * BASE_PATH/.claude/memory/**)",
+      "Bash(mkdir -p .claude/memory/**)",
+      "Bash(mkdir -p BASE_PATH/.claude/memory/**)",
+      "PowerShell(Copy-Item *_backup*)",
+      "PowerShell(New-Item -ItemType Directory *)"
+    ]
+  }
+}
+```
+
+Substitute BASE_PATH with the actual absolute path confirmed in Phase 1.
+
 Create .claude/memory/mockups/index.md:
 
 # Mockups Index

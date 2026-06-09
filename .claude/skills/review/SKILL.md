@@ -30,7 +30,9 @@ Flag and discuss — anything with potential consequences:
 
 1. Read CLAUDE.md
 2. Read .claude/memory/wip/[feature-slug].md
-   Run `echo "$(date +'%Y-%m-%d %H:%M') | review | [feature-slug] | START" >> .claude/audit.log`
+   Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | review | [feature-slug] | START`
+   (Substitute today's date and current time from your session context. Do not use shell date substitution.)
 3. Confirm status is reviewing
 4. Read .claude/memory/registry/components.md
 5. Read .claude/memory/known-bugs.md
@@ -103,6 +105,8 @@ tests confirmed:
 2. Add review summary to session log
 3. Back up and update registry/components.md if new components added
 4. Back up and update known-bugs.md if bugs added or resolved
-5. Run `echo "$(date +'%Y-%m-%d %H:%M') | review | [feature-slug] | END" >> .claude/audit.log`
+5. Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | review | [feature-slug] | END`
+   (Substitute today's date and current time from your session context.)
 
 Tell the user: "Review complete. Run /verify."

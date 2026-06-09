@@ -17,14 +17,16 @@ CLAUDE.md, memory files, and project settings are never touched.
 
 2. Clone the bstack source to a temp directory:
 
-   $tmp = "$env:TEMP\bstack-update-$(Get-Date -Format 'yyyyMMddHHmmss')"
+   $ts = Get-Date -Format 'yyyyMMddHHmmss'
+   $tmp = "$env:TEMP\bstack-update-$ts"
    git clone --depth 1 https://github.com/freitasbruno/bstack $tmp
 
    If clone fails: report the error and stop.
 
 3. Get the commit hash:
 
-   Set-Location $tmp; git rev-parse --short HEAD
+   Set-Location $tmp
+   git rev-parse --short HEAD
 
 4. List all skill files that will be overwritten and ask once:
    "Proceed with update?"

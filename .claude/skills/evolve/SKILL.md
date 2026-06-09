@@ -23,6 +23,26 @@ Listen to the answer. Ask only what you need to implement it correctly:
 
 Confirm your understanding in 2-3 sentences before touching anything.
 
+## File access rule — applies to all skills
+
+Skills must never shell out for file access. All reads, existence-checks,
+and writes go through the Read, Edit, and Write tools:
+- Read a file → Read tool (handles missing files gracefully — no shell guard needed)
+- Check existence → attempt Read; treat not-found as absent
+- Write or create → Write tool
+- Edit in place → Edit tool
+- Append to a log → Edit tool (match the last line and extend it)
+
+For audit.log entries: compose the timestamp string inline from context
+(`YYYY-MM-DD HH:mm`); never embed shell date substitution (`$(date...)` or
+`$(Get-Date...)`).
+
+Legitimate shell usage in skills: git commands, npm/npx, mkdir for new
+directories, Copy-Item for bootstrapping skill files. Everything else is
+a native tool call.
+
+When authoring or editing any skill step, enforce this rule on every line you write.
+
 ## Implementation
 
 Read the affected skill file(s) before making any changes.

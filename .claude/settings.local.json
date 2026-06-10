@@ -11,7 +11,8 @@
       "Bash(cp \"D:/CLAUDE/bstack/.claude/memory/roadmap/index.md\" \"D:/CLAUDE/bstack/.claude/memory/roadmap/_backup/index.2026-06-03-16h33.md\")",
       "Bash(git -C \"D:\\\\CLAUDE\\\\bstack\" status)",
       "Bash(git -C \"D:\\\\CLAUDE\\\\bstack\" log --oneline -5)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "PowerShell($tmp = \"$env:TEMP\\\\bstack-init-$\\(Get-Date -Format 'yyyyMMddHHmmss'\\)\"; git clone --depth 1 https://github.com/freitasbruno/bstack $tmp; if \\($?\\) { Set-Location $tmp; git rev-parse --short HEAD })"
     ]
   }
 }

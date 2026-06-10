@@ -1,3 +1,5 @@
 # BStack — local only, never tracked
 .claude/memory/wip/_archive/
 .claude/memory/**/_backup/
+.claude/skills/_backup/
+.claude/*.bak

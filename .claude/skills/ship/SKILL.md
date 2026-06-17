@@ -20,35 +20,7 @@ and close the wip.
    which step is missing
 4. Read .claude/memory/environments.md — confirm target repo and branch
 
-## Step 1 — Stage and commit
-
-Show the user exactly what is staged:
-
-git status
-git diff --staged --stat
-
-Do not auto-stage everything. Show changed files and ask:
-"These are the files changed. Should all be staged, or do you 
-want to exclude anything?"
-
-On confirmation, stage and commit using conventional format:
-
-<type>(<scope>): <short description>
-
-[optional body — what changed and why]
-
-Types: feat, fix, chore, refactor, style, docs, test, db
-Rules: lowercase, no period, max 72 chars, imperative mood
-
-Show proposed message and ask for confirmation before committing.
-
-## Step 2 — Push
-
-git push origin [branch]
-
-Confirm push completed and show commit hash.
-
-## Step 3 — Reflect and update memory
+## Step 1 — Reflect and update memory
 
 Back up each file before updating it.
 
@@ -88,12 +60,43 @@ Add any new reusable components, patterns, or utilities to:
 Add any deferred decisions or new tasks identified during this 
 cycle to roadmap/index.md with status not started.
 
-## Step 4 — Archive the wip
+## Step 2 — Archive the wip
 
 1. Add final session log entry with timestamp and completion note
 2. Note any TODOs, FIXMEs, or deferred items added to roadmap
 3. Move .claude/memory/wip/[feature-slug].md to 
    .claude/memory/wip/_archive/[feature-slug].YYYY-MM-DD-HHhmm.md
+
+## Step 3 — Stage and commit
+
+Show the user exactly what is staged:
+
+git status
+git diff --staged --stat
+
+Do not auto-stage everything. Show changed files and ask:
+"These are the files changed. Should all be staged, or do you 
+want to exclude anything?"
+
+The staged set will include updated memory files and the wip archive 
+move — this is expected and correct.
+
+On confirmation, stage and commit using conventional format:
+
+<type>(<scope>): <short description>
+
+[optional body — what changed and why]
+
+Types: feat, fix, chore, refactor, style, docs, test, db
+Rules: lowercase, no period, max 72 chars, imperative mood
+
+Show proposed message and ask for confirmation before committing.
+
+## Step 4 — Push
+
+git push origin [branch]
+
+Confirm push completed and show commit hash.
 
 ## Step 5 — Audit log
 

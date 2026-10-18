@@ -3,3 +3,6 @@
 .claude/memory/**/_backup/
 .claude/skills/_backup/
 .claude/*.bak
+
+# Per-machine Claude Code permissions
+.claude/settings.local.json

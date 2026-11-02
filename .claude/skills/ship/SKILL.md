@@ -40,7 +40,9 @@ Include:
 Back up old version first, then overwrite.
 
 ### Roadmap index
-Update roadmap/index.md — mark feature complete or update status.
+Update roadmap/index.md — mark feature complete or update status,
+and point its File column at roadmap/[feature-slug].md (the wip file
+is about to move).
 
 ### Schema files
 If feature changed the DB, update schema/index.md and relevant 
@@ -60,12 +62,19 @@ Add any new reusable components, patterns, or utilities to:
 Add any deferred decisions or new tasks identified during this 
 cycle to roadmap/index.md with status not started.
 
-## Step 2 — Archive the wip
+## Step 2 — Check the roadmap, archive the wip, close the log
 
-1. Add final session log entry with timestamp and completion note
-2. Note any TODOs, FIXMEs, or deferred items added to roadmap
-3. Move .claude/memory/wip/[feature-slug].md to 
+1. Re-read roadmap/index.md. The feature's row must show the status
+   you just set, and its File column must not point at wip/. Fix it
+   if not. Do not archive until both are true.
+2. Add final session log entry with timestamp and completion note
+3. Note any TODOs, FIXMEs, or deferred items added to roadmap
+4. Move .claude/memory/wip/[feature-slug].md to 
    .claude/memory/wip/_archive/[feature-slug].YYYY-MM-DD-HHhmm.md
+5. Append to .claude/audit.log using the Edit tool:
+   `YYYY-MM-DD HH:mm | ship | [feature-slug] | END`
+   (Substitute today's date and current time from your session context.)
+   This comes before the commit so the line is included in it.
 
 ## Step 3 — Stage and commit
 
@@ -78,8 +87,8 @@ Do not auto-stage everything. Show changed files and ask:
 "These are the files changed. Should all be staged, or do you 
 want to exclude anything?"
 
-The staged set will include updated memory files and the wip archive 
-move — this is expected and correct.
+The staged set will include updated memory files, the audit log and
+the wip archive move — this is expected and correct.
 
 On confirmation, stage and commit using conventional format:
 
@@ -97,12 +106,8 @@ Show proposed message and ask for confirmation before committing.
 git push origin [branch]
 
 Confirm push completed and show commit hash.
-
-## Step 5 — Audit log
-
-Append to .claude/audit.log using the Edit tool:
-`YYYY-MM-DD HH:mm | ship | [feature-slug] | END`
-(Substitute today's date and current time from your session context.)
+If the push fails, say the commit is local only and give the command
+to push it. Do not report the task as closed until the push succeeds.
 
 ## Final report
 
